@@ -116,7 +116,7 @@
         "release": "bun publish --access public"
     },
     "dependencies": {
-        "@monstermann/tree-shake-import-namespaces": "^0.2.2",
+        "@monstermann/tree-shake-import-namespaces": "^0.3.0",
         "unplugin": "^2.3.4",
         "unplugin-utils": "^0.3.0"
     }
