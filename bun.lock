@@ -24,9 +24,9 @@
     },
     "packages/unplugin-graph": {
       "name": "@monstermann/unplugin-graph",
-      "version": "0.1.2",
+      "version": "0.0.0",
       "dependencies": {
-        "@monstermann/tree-shake-import-namespaces": "^0.2.2",
+        "@monstermann/tree-shake-import-namespaces": "^0.3.0",
         "unplugin": "^2.3.4",
         "unplugin-utils": "^0.3.0",
       },
@@ -273,7 +273,7 @@
 
     "@monstermann/graph": ["@monstermann/graph@workspace:packages/graph"],
 
-    "@monstermann/tree-shake-import-namespaces": ["@monstermann/tree-shake-import-namespaces@0.2.2", "", { "dependencies": { "@jridgewell/remapping": "^2.3.4", "@jridgewell/sourcemap-codec": "^1.5.4", "astring": "^1.9.0", "magic-string": "^0.30.17", "oxc-parser": "^0.101.0", "oxc-walker": "^0.6.0", "picocolors": "^1.1.1" } }, "sha512-NBJp/l8fZYtTwwWfoIN4PCW/eQTF/jYEczUmdZt6z9yjPKoiQfZyLtgQZ/mFObU68bzKR9q+8XYphggPpCkojg=="],
+    "@monstermann/tree-shake-import-namespaces": ["@monstermann/tree-shake-import-namespaces@0.3.0", "", { "dependencies": { "@jridgewell/remapping": "^2.3.4", "@jridgewell/sourcemap-codec": "^1.5.4", "astring": "^1.9.0", "magic-string": "^0.30.17", "oxc-parser": "^0.101.0", "oxc-walker": "^0.6.0", "picocolors": "^1.1.1" } }, "sha512-ipwNfixAUhSvsZ13wHN72QyxIHTX5mE4TfGpyvNqi2YPF/f+sbUpbmJ/yRHJoTwEarogEa4OsHKHXYE90pjOHA=="],
 
     "@monstermann/tsconfig": ["@monstermann/tsconfig@0.0.0", "", {}, "sha512-DJfOlZ71AOBJWxPUUcy8SIkJLXOy1c9LP84o52I2JcpiODNOn7/c5P7Gqp7z6hPLLi9rgRCIzOEBrNOazZsYfQ=="],
 
