@@ -20,11 +20,11 @@
     },
     "packages/graph": {
       "name": "@monstermann/graph",
-      "version": "0.0.0",
+      "version": "0.1.0",
     },
     "packages/unplugin-graph": {
       "name": "@monstermann/unplugin-graph",
-      "version": "0.0.0",
+      "version": "0.1.0",
       "dependencies": {
         "@monstermann/tree-shake-import-namespaces": "^0.3.0",
         "unplugin": "^2.3.4",
