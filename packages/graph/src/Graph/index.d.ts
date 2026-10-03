@@ -28,10 +28,12 @@ import { mapEdge } from "./mapEdge.js";
 import { mapNode } from "./mapNode.js";
 import { mergeEdge } from "./mergeEdge.js";
 import { mergeNode } from "./mergeNode.js";
+import { NodeTypesMap } from "./internals/types.js";
 import { removeEdge } from "./removeEdge.js";
 import { removeNode } from "./removeNode.js";
 import { setEdge } from "./setEdge.js";
 import { setNode } from "./setNode.js";
+import { SourceTypesMap } from "./internals/types.js";
 import { toJS } from "./toJS.js";
 
 type NodeId = PropertyKey
@@ -42,27 +44,13 @@ type NodeType<T extends Node> = T["type"]
 
 type NodeOfType<T extends Node, U extends NodeType<T>> = Extract<T, { type: U }>
 
-type NodeIdentifier<T extends Node, U = NodeType<T>> =
+type NodeIdentifier<T extends Node, U extends NodeType<T>> =
     | { id: Extract<T, { type: U }>["id"], type: U }
     | [U, id: Extract<T, { type: U }>["id"]]
 
 type Edge = Record<string, unknown> | void
 
 type Edges<N extends Node> = Partial<Record<NodeType<N>, Partial<Record<NodeType<N>, Edge>>>>
-
-type SourceTypesMap = ReadonlyMap<any, SourceIdsMap>
-
-type SourceIdsMap = ReadonlyMap<NodeId, TargetTypesMap>
-
-type TargetTypesMap = ReadonlyMap<any, TargetIdsMap>
-
-type TargetIdsMap = ReadonlyMap<NodeId, Edge>
-
-type NodeIdsMap<T extends Node, U extends NodeType<T> = NodeType<T>> = ReadonlyMap<NodeId, NodeOfType<T, U>>
-
-interface NodeTypesMap<T extends Node> extends ReadonlyMap<NodeType<T>, NodeIdsMap<T, NodeType<T>>> {
-    get: <V extends NodeType<T>>(type: V) => NodeIdsMap<T, V> | undefined
-}
 
 interface Graph<N extends Node, _E extends Edges<N>> extends Map<"nodes" | "edges" | "clones", NodeTypesMap<N> | SourceTypesMap | Set<any>> {
     delete: (key: "clones") => boolean
@@ -111,12 +99,6 @@ export {
     Node,
     NodeId,
     NodeIdentifier,
-    NodeIdsMap,
     NodeOfType,
     NodeType,
-    NodeTypesMap,
-    SourceIdsMap,
-    SourceTypesMap,
-    TargetIdsMap,
-    TargetTypesMap,
 }

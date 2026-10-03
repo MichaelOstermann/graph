@@ -5,7 +5,7 @@
     "description": "Functional graph data-structure.",
     "author": "Michael Ostermann <michaelostermann@me.com>",
     "license": "MIT",
-    "homepage": "https://MichaelOstermann.github.io/graph",
+    "homepage": "https://github.com/MichaelOstermann/graph",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/MichaelOstermann/graph.git"
